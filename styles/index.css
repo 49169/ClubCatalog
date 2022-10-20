@@ -1,4 +1,6 @@
-
+:root{
+    --salmon-red:#ff8181;
+}
 
 header {
     height: 360px;
@@ -6,10 +8,135 @@ header {
 }
 
 .header-banner {
-    background-color: #333;
+    background-color: var(--salmon-red);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 300px;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    padding: 0 1rem;
+    position: absolute;
+    top: 4rem; 
+    left: 2rem;
+}
+
+header p{
+    color: #fff;
+    font-size:1.25rem;
+    padding: 0 1rem;
+    position: absolute;
+    top: 10rem; 
+    left: 2rem;
+}
+/*Search Bar*/
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid var(--salmon-red);
+    border-right: none;
+    padding: 5px;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus{
+    color: #00B4CC;
+}
+
+.searchButton {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--salmon-red);
+    background: var(--salmon-red);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+  
+  /*Resize the wrap to see the search bar change!*/
+.wrap{
+    width: 30%;
+    position: absolute;
+    top: 22rem;
+    left: 15rem;
+    transform: translate(-50%, -50%);
+}
+
+  /*Content*/
+
+.app-header {
+    display:block;
+    padding: 30px;
+}
+  
+.app-title {
+    display:inline-block;
+    width: 100%;
+    margin: 80px 0 0 0;
+    float:left;
+    position:relative;
+    color:#fff;
+}
+    
+.app-title .h1 {
+    font-size: 52px;
+    margin: 0;
+}
+    
+.app-title .p {
+    font-weight: 200;
+    opacity: .5;
+}
+  
+.app-title-content {
+    position:relative;
+    top:50%;
+    left: 50%;
+    width:100%;
+    text-align:center;
+    transform:translate(-50%, -50%);
+    
+    @media(min-width:768px) {
+      width:auto;
+      position:absolute;
+      text-align:left;
+    }
+}
+  
+.app-card-list {
+    display:inline-block;
+    width:100%;
+    float:right;
+    margin:0;
+    min-height: 75vh;
+    white-space:normal;
+    overflow-x: scroll;
+    margin-top:-70px;
+    
+} 
+.app-card-list .card {
+    margin: 60px 30px;
+    display: inline-block;
+}     
+.app-card-list .card-body {
+    white-space: normal;
+}
+
+.designer-link {
+    display:inline-block;
+    padding-top:40px;
 }
